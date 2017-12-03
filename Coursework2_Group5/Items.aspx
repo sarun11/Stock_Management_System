@@ -6,6 +6,17 @@
       <div>
         <asp:HiddenField ID="hfItemID" runat="server" />
         <table>
+             <tr>
+                <td>
+                    <asp:Label ID="Lbl_itemCode" runat="server" Text="Item Code: "></asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="tb_itemCode" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="itemCode_Validator" ControlToValidate="tb_itemName"
+                        runat="server" ErrorMessage="Item Code is Required is required!" ForeColor="Red"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
+
             <tr>
                 <td>
                     <asp:Label ID="Lbl_itemName" runat="server" Text="Item Name: "></asp:Label>
@@ -13,7 +24,7 @@
                 <td>
                     <asp:TextBox ID="tb_itemName" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="req_itemName" ControlToValidate="tb_itemName"
-                        runat="server" ErrorMessage="Customer Name is required!" ForeColor="Red"></asp:RequiredFieldValidator>
+                        runat="server" ErrorMessage="Item Name is required!" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
             </tr>
 
@@ -134,12 +145,14 @@
 
          <asp:GridView ID="grid_User" runat="server" AutoGenerateColumns="false">
             <Columns>
+                <asp:BoundField DataField="itemcode" HeaderText="Item Code" />
                 <asp:BoundField DataField="itemname" HeaderText="Item Name" />
                 <asp:BoundField DataField="itemdescription" HeaderText="Item Description" />
                 <asp:BoundField DataField="price" HeaderText="Unit Price" />
-                <asp:BoundField DataField="purchasedate" HeaderText="Purchase Date" />
+                <asp:BoundField DataField="purchasedate" HeaderText="Purchase Date" DataFormatString="{0:yyyy/MM/dd}"/>
                 <asp:BoundField DataField="supplier_name" HeaderText="Supplier Name" />
-                 <asp:BoundField DataField="category_name" HeaderText="Category Name" />
+                <asp:BoundField DataField="category_name" HeaderText="Category Name" />
+                <asp:BoundField DataField="quantity" HeaderText="In Stock Quantity" />
                  <asp:BoundField DataField="user_name" HeaderText="User Name" />
                 <asp:TemplateField>
                     <ItemTemplate>

@@ -10,115 +10,115 @@
 namespace Coursework2_Group5 {
     
     
-    public partial class Items {
+    public partial class SupplierDetails {
         
         /// <summary>
-        /// hfItemID control.
+        /// hfSupplierID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfItemID;
+        protected global::System.Web.UI.WebControls.HiddenField hfSupplierID;
         
         /// <summary>
-        /// Lbl_itemCode control.
+        /// Lbl_supplierName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_itemCode;
+        protected global::System.Web.UI.WebControls.Label Lbl_supplierName;
         
         /// <summary>
-        /// tb_itemCode control.
+        /// tb_supplierName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_itemCode;
+        protected global::System.Web.UI.WebControls.TextBox tb_supplierName;
         
         /// <summary>
-        /// itemCode_Validator control.
+        /// req_supplierName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator itemCode_Validator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_supplierName;
         
         /// <summary>
-        /// Lbl_itemName control.
+        /// lbl_supplierAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_itemName;
+        protected global::System.Web.UI.WebControls.Label lbl_supplierAddress;
         
         /// <summary>
-        /// tb_itemName control.
+        /// tb_supplierAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_itemName;
+        protected global::System.Web.UI.WebControls.TextBox tb_supplierAddress;
         
         /// <summary>
-        /// req_itemName control.
+        /// req_fullName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_itemName;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_fullName;
         
         /// <summary>
-        /// lbl_description control.
+        /// lbl_contactNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_description;
+        protected global::System.Web.UI.WebControls.Label lbl_contactNumber;
         
         /// <summary>
-        /// tb_description control.
+        /// tb_contactNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_description;
+        protected global::System.Web.UI.WebControls.TextBox tb_contactNumber;
         
         /// <summary>
-        /// req_description control.
+        /// list_validator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_description;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator list_validator;
         
         /// <summary>
-        /// lbl_price control.
+        /// lbl_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_price;
+        protected global::System.Web.UI.WebControls.Label lbl_email;
         
         /// <summary>
-        /// tb_price control.
+        /// tb_email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_price;
+        protected global::System.Web.UI.WebControls.TextBox tb_email;
         
         /// <summary>
         /// RequiredFieldValidator1 control.
@@ -130,22 +130,22 @@ namespace Coursework2_Group5 {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
-        /// lbl_purchaseDate control.
+        /// lbl_url control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_purchaseDate;
+        protected global::System.Web.UI.WebControls.Label lbl_url;
         
         /// <summary>
-        /// tb_purchaseDate control.
+        /// tb_url control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_purchaseDate;
+        protected global::System.Web.UI.WebControls.TextBox tb_url;
         
         /// <summary>
         /// RequiredFieldValidator2 control.
@@ -157,49 +157,22 @@ namespace Coursework2_Group5 {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
-        /// lbl_supplier control.
+        /// lbl_contactPerson control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_supplier;
+        protected global::System.Web.UI.WebControls.Label lbl_contactPerson;
         
         /// <summary>
-        /// list_supplier control.
+        /// tb_contactPerson control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList list_supplier;
-        
-        /// <summary>
-        /// list_validator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator list_validator1;
-        
-        /// <summary>
-        /// Lbl_user control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_user;
-        
-        /// <summary>
-        /// list_user control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList list_user;
+        protected global::System.Web.UI.WebControls.TextBox tb_contactPerson;
         
         /// <summary>
         /// RequiredFieldValidator3 control.
@@ -211,22 +184,22 @@ namespace Coursework2_Group5 {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
-        /// Lbl_category control.
+        /// lbl_user control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Lbl_category;
+        protected global::System.Web.UI.WebControls.Label lbl_user;
         
         /// <summary>
-        /// list_category control.
+        /// list_user control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList list_category;
+        protected global::System.Web.UI.WebControls.DropDownList list_user;
         
         /// <summary>
         /// RequiredFieldValidator4 control.
@@ -283,12 +256,12 @@ namespace Coursework2_Group5 {
         protected global::System.Web.UI.WebControls.Label lblErrorMsg;
         
         /// <summary>
-        /// grid_User control.
+        /// grid_supplier control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grid_User;
+        protected global::System.Web.UI.WebControls.GridView grid_supplier;
     }
 }

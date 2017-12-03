@@ -32,12 +32,18 @@ namespace Coursework2_Group5
                 FillDropDownListSupplier();
 
             }
+            else
+            {
+                lblSuccessMsg.Text = "";
+                lblErrorMsg.Text = "";
+            }
         }
 
         //A method to Clear Values
         protected void Clear()
         {
             hfItemID.Value = "";
+            tb_itemCode.Text = "";
             tb_itemName.Text = "";
             tb_description.Text = "";
             tb_price.Text = "";
@@ -91,13 +97,11 @@ namespace Coursework2_Group5
 
         protected void displayDataGrid()
         {
-            
             //Select such dataTable as the datasource for the GridView and bind the Gridview 
             grid_User.DataSource = displayData("ItemViewAll");
             grid_User.DataBind();
         }
-
-
+        
 
         //A method to fill the values to the DropDown List
         protected DataSet FillDropDownList(string stored_procedure)
@@ -158,12 +162,16 @@ namespace Coursework2_Group5
         }
 
 
-
-
         protected void btn_Save_Click(object sender, EventArgs e)
         {
 
             //Validation to determine whether the user has entered an empty value/ Valid Values or not
+            if (String.IsNullOrEmpty(tb_itemCode.Text))
+            {
+                lblErrorMsg.Text = "Please enter an Item Code!!";
+                return;
+            }
+
             if (String.IsNullOrEmpty(tb_itemName.Text))
             {
                 lblErrorMsg.Text = "Please enter an Item Name!!";
@@ -228,6 +236,7 @@ namespace Coursework2_Group5
 
             // Passing the respective values as parameters to the Stored Procedure
             sqlCmd.Parameters.AddWithValue("@itemid", (hfItemID.Value == "" ? 0 : Convert.ToInt32(hfItemID.Value)));
+            sqlCmd.Parameters.AddWithValue("@itemcode", tb_itemCode.Text.Trim());
             sqlCmd.Parameters.AddWithValue("@itemname", tb_itemName.Text.Trim());
             sqlCmd.Parameters.AddWithValue("@itemdescription", tb_description.Text.Trim());
             sqlCmd.Parameters.AddWithValue("@price", tb_price.Text.Trim());
@@ -288,20 +297,27 @@ namespace Coursework2_Group5
 
                 //Close the Connection
                 sqlConn.Close();
+
+                //Calling a method to clear all the values in the Front End
+                Clear();
+
+                //Calling a method to display data into the gridview
+                displayDataGrid();
+
+                lblSuccessMsg.Text = "Item Deleted Successfully!!";
+               
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                lblErrorMsg.Text = "The Item record cannot be deleted as it is currently in stock!!";
+                //Calling a method to clear all the values in the Front End
+                Clear();
+
+                //Calling a method to display data into the gridview
+                displayDataGrid();
+
+                lblErrorMsg.Text = "Item Existing in Stock Cannot be Deleted!!"; 
             }
-            
-
-            //Calling a method to clear all the values in the Front End
-            Clear();
-
-            //Calling a method to display data into the gridview
-            displayDataGrid();
-
-            lblSuccessMsg.Text = "Item Deleted Successfully!!";
 
         }
 
@@ -346,6 +362,7 @@ namespace Coursework2_Group5
             string dropDownlist_supplier_text = dt.Rows[0]["supplier_name"].ToString();
 
             //Set the values stored in the DataTables to the Textboxes
+            tb_itemCode.Text = dt.Rows[0]["itemcode"].ToString();
             tb_itemName.Text = dt.Rows[0]["itemname"].ToString();
             tb_description.Text = dt.Rows[0]["itemdescription"].ToString();
             tb_price.Text = dt.Rows[0]["price"].ToString();
